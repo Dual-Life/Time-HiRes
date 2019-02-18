@@ -67,3 +67,4 @@
 
 # Avoid appveyor.com file
 ^\.appveyor.yml
+Makefile.old
