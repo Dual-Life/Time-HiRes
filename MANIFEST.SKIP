@@ -68,3 +68,5 @@
 # Avoid appveyor.com file
 ^\.appveyor.yml
 Makefile.old
+const-c.inc
+const-xs.inc
