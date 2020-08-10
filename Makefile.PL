@@ -913,7 +913,7 @@ sub doMakefile {
             META_MERGE => {
                 resources => {
                     repository => 'https://github.com/Perl/perl5.git',
-                    bugtracker => 'https://github.com/Perl/perl5/pulls',
+                    bugtracker => 'https://github.com/Perl/perl5/issues',
                     homepage   => "https://github.com/Perl/perl5",
                 },
             },
