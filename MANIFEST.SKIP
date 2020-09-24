@@ -40,12 +40,18 @@
 ~$
 \.old$
 \#$
-\b\.#
-\.bak$
-\.tmp$
 \.#
+\.bak$
+\.bak$
+\.bs$
+\.o$
+\.swp$
+\.tmp$
+\b\.#
 \.rej$
 \..*\.sw.?$
+
+^HiRes\.c$
 
 # Avoid OS-specific files/dirs
 # Mac OSX metadata
@@ -71,3 +77,6 @@
 Makefile.old
 const-c.inc
 const-xs.inc
+
+TODO
+xdefine
