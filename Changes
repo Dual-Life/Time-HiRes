@@ -1,12 +1,9 @@
 Revision history for the Perl extension Time::HiRes.
 
-1.9764_02 [2020-09-24]
- - Update ppport.h to Devel-PPPort v3.60
+{{NEXT}}
 
-1.9764_01 [2020-08-10]
  - Remove obsolete vms code
  - Use core version compare
- - Update ppport.h to Devel-PPPort v3.59
 
 1.9764 [2020-08-10]
  - Fix a bunch of repeated-word typos
