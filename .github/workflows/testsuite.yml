@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: perl -V
         run: perl -V
       - name: Makefile.PL
@@ -43,51 +43,30 @@ jobs:
       matrix:
         perl-version:
           [
-            "perl:5.32",
-            "perl:5.30",
-            "perl:5.28",
-            "perl:5.26",
-            "perl:5.24",
-            "perl:5.22",
-            "perl:5.20",
-            "perl:5.18",
-            "perl:5.16",
-            "perl:5.14",
-            "perl:5.12",
-            "perl:5.10",
-            "perl:5.8",
-            #"perldocker/perl:5.6",
+            "devel",
+            "5.38",
+            "5.36",
+            "5.34",
+            "5.32",
+            "5.30",
+            "5.28",
+            "5.26",
+            "5.24",
+            "5.22",
+            "5.20",
+            "5.18",
+            "5.16",
+            "5.14",
+            "5.12",
+            "5.10",
+            "5.8",
           ]
 
     container:
-      image: ${{ matrix.perl-version }}
+      image: perl:${{ matrix.perl-version }}
 
     steps:
-      - uses: actions/checkout@v1
-      - name: perl -V
-        run: perl -V
-      - name: Makefile.PL
-        run: perl -I$(pwd) Makefile.PL
-      - name: make test
-        run: make test
-
-  macOS:
-    needs: [ubuntu]
-    env:
-      PERL_USE_UNSAFE_INC: 0
-      AUTHOR_TESTING: 1
-      AUTOMATED_TESTING: 1
-      RELEASE_TESTING: 1
-
-    runs-on: macOS-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        perl-version: [latest]
-
-    steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: perl -V
         run: perl -V
       - name: Makefile.PL
@@ -111,7 +90,7 @@ jobs:
         perl-version: [latest]
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Set up Perl
         run: |
           choco install strawberryperl
